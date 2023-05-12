@@ -36,7 +36,7 @@ namespace NHibernate.Envers.Entities.Mapper
 
 		public bool MapToMapFromEntity(ISessionImplementor session, IDictionary<string, object> data, object newObj, object oldObj) 
 		{
-			data[_propertyData.Name] = newObj;
+			data[_propertyData.Name] = oldObj;
 			if (bothOldAndNewAreEmptyStrings(session, newObj, oldObj)) 
 				return false;
 			if (newObj == null)
