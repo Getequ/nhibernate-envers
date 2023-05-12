@@ -42,11 +42,11 @@ namespace NHibernate.Envers.Strategy
 			// create a subquery builder
 			// SELECT max(e.revision) FROM versionsReferencedEntity e2
 			var maxERevQb = rootQueryBuilder.NewSubQueryBuilder(idData.AuditEntityName, alias2);
-			maxERevQb.AddProjection("max", alias2, revisionPropertyPath, false);
+			maxERevQb.AddProjection("min", alias2, revisionPropertyPath, false);
 			// WHERE
 			var maxERevQbParameters = maxERevQb.RootParameters;
 			// e2.revision <= :revision
-			maxERevQbParameters.AddWhereWithNamedParam(revisionPropertyPath, "<=", QueryConstants.RevisionParameter);
+			maxERevQbParameters.AddWhereWithNamedParam(revisionPropertyPath, ">=", QueryConstants.RevisionParameter);
 			// e2.id_ref_ed = e.id_ref_ed
 			idData.OriginalMapper.AddIdsEqualToQuery(maxERevQbParameters,
 					alias1 + "." + originalIdPropertyName, alias2 + "." + originalIdPropertyName);
