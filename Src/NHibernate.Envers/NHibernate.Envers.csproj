@@ -1,14 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <PackageId>NHibernate.Envers</PackageId>
+    <PackageId>Wk.Envers</PackageId>
     <Authors>Roger Kratz, NHibernate community, Hibernate community</Authors>
-    <Description>Audit trail integrated with NHibernate.</Description>
+    <Description>Audit trail integrated with NHibernate. (store old values)</Description>
     <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
     <PackageTags>Audit, NHibernate, Envers, History, Auditing</PackageTags>
     <PackageProjectUrl>https://github.com/nhibernate/nhibernate-envers</PackageProjectUrl>
     <AssemblyOriginatorKeyFile>Envers.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
+    <Version>5.2.3.1</Version>
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
   </PropertyGroup>
   <PropertyGroup Condition="'$(TargetFramework)' == 'net461'">
