@@ -41,9 +41,10 @@ namespace NHibernate.Envers.RevisionInfo
 
 		public ICriteria RevisionNumberForDateQuery(ISession session, DateTime date)
 		{
+			// WE take next revision after target date (originally was  "max(revNumber) <= date")
 			return session.CreateCriteria(_revisionInfoEntityName)
-					.SetProjection(Projections.Max(_revisionInfoIdName))
-					.Add(Restrictions.Le(_revisionInfoTimestampName, _timestampAsDate ? (object)date : date.Ticks));
+					.SetProjection(Projections.Min(_revisionInfoIdName))
+					.Add(Restrictions.Gt(_revisionInfoTimestampName, _timestampAsDate ? (object)date : date.Ticks));
 		}
 
 		public ICriteria RevisionsQuery(ISession session, IEnumerable<long> revisions)
