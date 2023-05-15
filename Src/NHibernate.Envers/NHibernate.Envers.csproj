@@ -9,7 +9,7 @@
     <PackageProjectUrl>https://github.com/nhibernate/nhibernate-envers</PackageProjectUrl>
     <AssemblyOriginatorKeyFile>Envers.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
-    <Version>5.4.0</Version>
+    <Version>5.4.0.1</Version>
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
   </PropertyGroup>
   <PropertyGroup Condition="'$(TargetFramework)' == 'net461'">
@@ -19,6 +19,6 @@
     <DebugType>Portable</DebugType>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="NHibernate" Version="[5.4.0, 5.5.0)" />
+    <PackageReference Include="NHibernate" Version="[5.3.0, 5.5.0)" />
   </ItemGroup>
 </Project>
