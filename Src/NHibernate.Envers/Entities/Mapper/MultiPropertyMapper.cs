@@ -79,7 +79,7 @@ namespace NHibernate.Envers.Entities.Mapper
 				{
 					var propertyMapper = Properties[_propertyDatas[propertyName]];
 					var newObj = getAtIndexOrNull(newState, i);
-					var oldObj = getAtIndexOrNull(oldState, i);
+					var oldObj = oldState != null ? getAtIndexOrNull(oldState, i) : newObj;
 					ret |= propertyMapper.MapToMapFromEntity(session, data, newObj, oldObj);
 					propertyMapper.MapModifiedFlagsToMapFromEntity(session, data, newObj, oldObj);
 				}
