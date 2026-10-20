@@ -1,4 +1,36 @@
-=== vNext, NH 5.4.0 ===
+=== v5.7.0 (v 5.7.0.0), 2026-07-16, NH 5.7.0 ===
+
+
+
+=== v5.6.0 (v 5.6.0.0), 2025-10-17, NH 5.6.0 ===
+
+
+
+=== v5.5.2 (v 5.5.2.0), 2024-07-09, NH 5.5.0 ===
+
+** Bug
+* #53 NullReferenceException in lazy bidirectional many-to-one properties
+
+** Tasks
+* #55 Remove usage of NHIBERNATE_BOT_TOKEN
+
+
+
+=== v5.5.1 (v 5.5.1.0), 2024-02-07, NH 5.5.0 ===
+
+** New Feature
+* #50 Async support
+
+** Tasks
+* #51 Run tests on MySQL 8 with MySQL8InnoDBDialect
+
+
+
+=== v5.5.0 (v 5.5.0.0), 2024-01-04, NH 5.5.0 ===
+
+
+
+=== v5.4.0 (v 5.4.0.0), 2022-11-23, NH 5.4.0 ===
 
 
 
